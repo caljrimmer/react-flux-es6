@@ -1,0 +1,39 @@
+{
+  "name": "react-flux-es6",
+  "version": "0.0.1",
+  "author": "Callum Rimmer <callumt@deadtrendy.co.uk>",
+  "description": "An Example React / Flux / E56 App for displaying a bill",
+  "dependencies": {
+    "jquery": "*",
+    "underscore": "*",
+    "backbone": "*",
+    "react": "*",
+    "react-dom": "*",
+    "flux": "*",
+    "es6-mixins" : "*"
+  },
+  "devDependencies": {
+    "babelify": "*",
+    "browser-sync": "*",
+    "browserify": "*",
+    "gulp": "*",
+    "react-tools": "^0.13.3",
+    "babel-jest": "*",
+    "jest-cli" : "0.4.0",
+    "vinyl-source-stream": "*"
+  },
+  "scripts": {
+    "start": "npm install && gulp",
+    "test": "jest"
+  },
+  "jest": {
+    "scriptPreprocessor": "./node_modules/babel-jest",
+    "testFileExtensions": ["es6", "js"],
+    "moduleFileExtensions": ["js", "json", "es6"],
+    "unmockedModulePathPatterns":["react"]
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/caljrimmer/react-flux-bill.git"
+  }
+}
