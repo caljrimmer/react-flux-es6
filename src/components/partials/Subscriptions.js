@@ -17,9 +17,9 @@ class Subscriptions extends React.Component {
         var total = this.props.model.get('package').total;
         var subscriptions = this.props.model.get('package').subscriptions;
 
-        var SubscriptionsRows = subscriptions.map((sub) => {
+        var SubscriptionsRows = subscriptions.map((sub,i) => {
             return (
-                <tr>
+                <tr key={"calls-" + i}>
                     <td>{sub.type}</td>
                     <td>{sub.name}</td>
                     <td>{sub.cost}</td>

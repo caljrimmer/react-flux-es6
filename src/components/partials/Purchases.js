@@ -23,9 +23,9 @@ class Purchases extends React.Component {
          * that maps the skyStore params to type names
          */
 
-        var RentalRows = rentals.map((row) => {
+        var RentalRows = rentals.map((row,i) => {
             return (
-                <tr>
+                <tr key={ "rental" + i }>
                     <td>Rental</td>
                     <td>{row.title}</td>
                     <td>{row.cost}</td>
@@ -33,9 +33,9 @@ class Purchases extends React.Component {
             )
         });
 
-        var KeepRows = buyAndKeep.map((row) => {
+        var KeepRows = buyAndKeep.map((row,i) => {
             return (
-                <tr>
+                <tr key={"bought" + i }>
                     <td>Bought</td>
                     <td>{row.title}</td>
                     <td>{row.cost}</td>

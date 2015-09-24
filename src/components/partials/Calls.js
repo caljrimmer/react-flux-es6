@@ -17,9 +17,9 @@ class Calls extends React.Component {
         var total = this.props.model.get('callCharges').total;
         var calls = this.props.model.get('callCharges').calls;
 
-        var CallRows = calls.map((call) => {
+        var CallRows = calls.map((call,i) => {
             return (
-                <tr>
+                <tr key={ "calls" + i }>
                     <td>{call.called}</td>
                     <td>{call.duration}</td>
                     <td>{call.cost}</td>

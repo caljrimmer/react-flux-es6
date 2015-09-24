@@ -8,6 +8,10 @@ var b = browserify('./src/main.js', {debug: true}).transform(babelify);
 
 gulp.task('browserify', function () {
   return b.bundle()
+    .on('error', function (err) {
+      console.log(err.toString());
+      this.emit("end");
+    })
     .pipe(source('main.js'))
     .pipe(gulp.dest('./public'))
 });
